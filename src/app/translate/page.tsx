@@ -5,8 +5,9 @@ import { loginIsRequiredServer } from "@util/auth";
 import { Anime } from "@type/anime";
 
 import AnimeCard from "@comp/animeCard";
-import { CreateBtn } from "@comp/createBtn";
 import Card from "@asset/card.jpg";
+
+import { ManageForm, DetailsForm } from "./form";
 
 export default async function Translate() {
   await loginIsRequiredServer();
@@ -55,11 +56,13 @@ export default async function Translate() {
       <section className="layout">
         <div className="section-title">
           <h1>Translate List</h1>
-          <CreateBtn />
         </div>
         <section className="horizontal-container">
           {data?.map((each: Anime, index) => (
-            <AnimeCard key={index} content={each} variant="large" />
+            <AnimeCard key={index} content={each} variant="large">
+              <ManageForm />
+              <DetailsForm />
+            </AnimeCard>
           ))}
         </section>
       </section>

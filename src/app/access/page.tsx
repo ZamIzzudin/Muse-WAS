@@ -5,7 +5,7 @@ import USER from "@handler/user";
 import { UserList } from "@type/user";
 import ListCard from "@comp/listCard";
 
-import { CreateBtn } from "@comp/createBtn";
+import { CreateForm, EditForm, DeleteForm } from "./form";
 
 export default async function Access() {
   await loginIsRequiredServer();
@@ -16,7 +16,7 @@ export default async function Access() {
       <section className="layout">
         <div className="section-title">
           <h1>Access List</h1>
-          <CreateBtn />
+          <CreateForm />
         </div>
         <Row>
           <Col className="col-md-1">No.</Col>
@@ -28,7 +28,10 @@ export default async function Access() {
         </Row>
         <div className="vertical-container">
           {users?.map((user: UserList, index: number) => (
-            <ListCard variant="access" data={user} number={index + 1} />
+            <ListCard variant="access" data={user} number={index + 1}>
+              <EditForm />
+              <DeleteForm />
+            </ListCard>
           ))}
         </div>
       </section>

@@ -8,6 +8,8 @@ import ListCard from "@comp/listCard";
 
 import { TaskList } from "@type/task";
 
+import { DetailForm } from "./form";
+
 export default async function Translate() {
   await loginIsRequiredServer();
 
@@ -65,7 +67,9 @@ export default async function Translate() {
         </Row>
         <div className="vertical-container">
           {data.map((each: TaskList, index) => (
-            <ListCard variant="task" data={each} number={index + 1} />
+            <ListCard variant="task" data={each} number={index + 1}>
+              <DetailForm />
+            </ListCard>
           ))}
         </div>
       </section>

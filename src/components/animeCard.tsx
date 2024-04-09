@@ -4,13 +4,15 @@ import { Anime } from "@type/anime";
 import Image from "next/image";
 
 import styles from "@style/components/animeCard.module.css";
+import { Children, ReactNode } from "react";
 
 type Props = {
+  children: ReactNode;
   content: Anime;
   variant: string;
 };
 
-export default function AnimeCard({ content, variant }: Props) {
+export default function AnimeCard({ content, variant, children }: Props) {
   if (variant === "large") {
     return (
       <div className={styles.card_large}>
@@ -22,10 +24,7 @@ export default function AnimeCard({ content, variant }: Props) {
             <p>{content.released_date}</p>
             <p>Notes : - </p>
           </div>
-          <div className={styles.card_cta}>
-            <button>Manage</button>
-            <button className="secondary">Details</button>
-          </div>
+          <div className={styles.card_cta}>{children}</div>
         </div>
       </div>
     );
@@ -39,7 +38,7 @@ export default function AnimeCard({ content, variant }: Props) {
         <span className={styles.card_status}>{content.status}</span>
         <h1>{content.name}</h1>
         <p>{content.description}</p>
-        <button>Manage</button>
+        {children}
       </div>
     </div>
   );

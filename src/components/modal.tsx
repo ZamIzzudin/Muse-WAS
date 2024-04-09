@@ -16,7 +16,7 @@ export default function Modal({ children, isShow, setShow }: Props) {
   function handleCloseOverlay(event: any) {
     // Deny Event from Child
     if (event.target.id === "overlay") {
-      setShow({ value: false, type: null });
+      setShow({ value: false });
     }
   }
   return (
@@ -31,7 +31,7 @@ export default function Modal({ children, isShow, setShow }: Props) {
             <h1>{isShow.title}</h1>
             <span
               className={style.close_button}
-              onClick={() => setShow({ value: false, type: null })}
+              onClick={() => setShow({ value: false })}
             >
               <IconContext.Provider
                 value={{ className: "icon", style: { fontSize: "1.6em" } }}

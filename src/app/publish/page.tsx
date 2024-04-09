@@ -5,8 +5,9 @@ import { loginIsRequiredServer } from "@util/auth";
 import { Anime } from "@type/anime";
 
 import AnimeCard from "@comp/animeCard";
-import { CreateBtn } from "@comp/createBtn";
 import Card from "@asset/card.jpg";
+
+import { ManageForm } from "./form";
 
 export default async function Publish() {
   await loginIsRequiredServer();
@@ -73,11 +74,12 @@ export default async function Publish() {
       <section className="layout">
         <div className="section-title">
           <h1>Published List</h1>
-          <CreateBtn />
         </div>
         <section className="horizontal-container">
           {data?.map((each: Anime, index) => (
-            <AnimeCard key={index} content={each} variant="small" />
+            <AnimeCard key={index} content={each} variant="small">
+              <ManageForm />
+            </AnimeCard>
           ))}
         </section>
       </section>

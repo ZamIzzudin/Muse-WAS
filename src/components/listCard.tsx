@@ -1,6 +1,7 @@
 /** @format */
 
 import { Row, Col } from "react-bootstrap";
+import { ReactNode } from "react";
 
 import styles from "@style/components/listCard.module.css";
 
@@ -8,9 +9,10 @@ interface Props {
   variant: string;
   data: any;
   number: number;
+  children: ReactNode;
 }
 
-export default function ListCard({ variant, data, number }: Props) {
+export default function ListCard({ variant, data, number, children }: Props) {
   switch (variant) {
     case "task":
       return (
@@ -23,9 +25,7 @@ export default function ListCard({ variant, data, number }: Props) {
           <Col className="col-md-2">{data.assigned_to}</Col>
           <Col className="col-md-2">{data.status}</Col>
           <Col className="col-md-2">
-            <div className="table-cta">
-              <button>Details</button>
-            </div>
+            <div className="table-cta">{children}</div>
           </Col>
         </Row>
       );
@@ -40,10 +40,7 @@ export default function ListCard({ variant, data, number }: Props) {
           <Col className="col-md-2">{data.email}</Col>
           <Col className="col-md-2">{data.role}</Col>
           <Col className="col-md-3">
-            <div className="table-cta">
-              <button>Update</button>
-              <button>Delete</button>
-            </div>
+            <div className="table-cta">{children}</div>
           </Col>
         </Row>
       );
