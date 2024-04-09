@@ -1,0 +1,13 @@
+/** @format */
+
+.card {
+  background-color: var(--black-fade);
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.card div:nth-child(2) span {
+  text-wrap: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}

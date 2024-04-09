@@ -1,0 +1,63 @@
+/** @format */
+
+.filter_container {
+  width: 100%;
+  min-height: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter_item {
+  min-height: 100px;
+  min-width: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  box-shadow: 10px 10px 20px 0px rgba(158, 158, 158, 0.5);
+  transition: 0.2s;
+}
+
+.filter_item:nth-child(1) {
+  background-color: cornflowerblue;
+  border: 3px solid cornflowerblue;
+}
+
+.filter_item:nth-child(2) {
+  background-color: goldenrod;
+  border: 3px solid goldenrod;
+}
+
+.filter_item:nth-child(3) {
+  background-color: limegreen;
+  border: 3px solid limegreen;
+}
+
+.filter_item:nth-child(4) {
+  background-color: tomato;
+  border: 3px solid tomato;
+}
+
+.filter_item:nth-child(1):hover {
+  background-color: transparent;
+  color: cornflowerblue;
+}
+
+.filter_item:nth-child(2):hover {
+  background-color: transparent;
+  color: goldenrod;
+}
+
+.filter_item:nth-child(3):hover {
+  background-color: transparent;
+  color: limegreen;
+}
+
+.filter_item:nth-child(4):hover {
+  background-color: transparent;
+  color: tomato;
+}
