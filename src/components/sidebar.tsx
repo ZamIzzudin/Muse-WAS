@@ -8,17 +8,7 @@ import SignOutBtn from "./signOutBtn";
 import Link from "next/link";
 import Image from "next/image";
 
-import { IconContext } from "react-icons";
-import { FiHome } from "react-icons/fi";
-import {
-  RiUserFollowLine,
-  RiTranslate,
-  RiUploadCloud2Line,
-  RiTaskLine,
-} from "react-icons/ri";
-
-import Logo from "@asset/logo.png";
-import Default_PP from "@asset/default_pp.jpg";
+import Icon from "./icon";
 
 export default function SideBar({ user }: Readonly<{ user: any }>) {
   const pathname = usePathname();
@@ -28,8 +18,12 @@ export default function SideBar({ user }: Readonly<{ user: any }>) {
       className={`${style.sidebar} ${pathname === "/signin" ? style.hide : ""}`}
     >
       <ul>
-        <div className={`${style.brand_logo}`}>
-          <Image src={Logo} alt="Logo Muse" width={80} height={80} />
+        <div className={`${style.user_detail}`}>
+          <Image src={user?.picture} alt="profile" width={20} height={20} />
+          <div>
+            <p>{user?.name}</p>
+            <p>{user?.role}</p>
+          </div>
         </div>
         <li
           className={`${pathname === "/" ? style.active : ""} ${
@@ -37,71 +31,52 @@ export default function SideBar({ user }: Readonly<{ user: any }>) {
           }`}
         >
           <Link href="/">
-            <IconContext.Provider value={{ className: "icon" }}>
-              <FiHome />
-            </IconContext.Provider>
+            <Icon variant="Home" />
             Home
           </Link>
         </li>
         <li
-          className={`${pathname === "/access" ? style.active : ""} ${
+          className={`${pathname.includes("/access") ? style.active : ""} ${
             style.link_item
           }`}
         >
           <Link href="/access">
-            <IconContext.Provider value={{ className: "icon" }}>
-              <RiUserFollowLine />
-            </IconContext.Provider>
+            <Icon variant="Access" />
             Access
           </Link>
         </li>
         <li
-          className={`${pathname === "/translate" ? style.active : ""} ${
+          className={`${pathname.includes("/translate") ? style.active : ""} ${
             style.link_item
           }`}
         >
           <Link href="/translate">
-            <IconContext.Provider value={{ className: "icon" }}>
-              <RiTranslate />
-            </IconContext.Provider>
+            <Icon variant="Translate" />
             Translate
           </Link>
         </li>
         <li
-          className={`${pathname === "/publish" ? style.active : ""} ${
+          className={`${pathname.includes("/publish") ? style.active : ""} ${
             style.link_item
           }`}
         >
           <Link href="/publish">
-            <IconContext.Provider value={{ className: "icon" }}>
-              <RiUploadCloud2Line />
-            </IconContext.Provider>
+            <Icon variant="Publish" />
             Publish
           </Link>
         </li>
         <li
-          className={`${pathname === "/task" ? style.active : ""} ${
+          className={`${pathname.includes("/task") ? style.active : ""} ${
             style.link_item
           }`}
         >
           <Link href="/task">
-            <IconContext.Provider value={{ className: "icon" }}>
-              <RiTaskLine />
-            </IconContext.Provider>
+            <Icon variant="Task" />
             Task
           </Link>
         </li>
       </ul>
-      <div className={style.user_detail}>
-        <div className={style.user_data}>
-          <Image src={Default_PP} alt="User Image" width={50} height={50} />
-          <div>
-            <span>
-              <b>{user?.name}</b>
-            </span>
-            <span>{user?.role}</span>
-          </div>
-        </div>
+      <div className={style.logout_container}>
         <SignOutBtn />
       </div>
     </aside>

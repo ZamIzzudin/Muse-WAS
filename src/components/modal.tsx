@@ -28,7 +28,7 @@ export default function Modal({ children, isShow, setShow }: Props) {
       <div className={style.modal}>
         {isShow.value ? (
           <div className={style.modal_header}>
-            <h1>{isShow.title}</h1>
+            <h5>{isShow.title}</h5>
             <span
               className={style.close_button}
               onClick={() => setShow({ value: false })}

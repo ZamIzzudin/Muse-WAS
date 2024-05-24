@@ -1,0 +1,126 @@
+/** @format */
+
+.analytic_layout {
+  padding: 5% 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.channel_detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.channel_detail_card {
+  border: 1px solid var(--white-fade);
+  width: 50%;
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  border-radius: var(--half-border-radius);
+  position: relative;
+}
+
+.channel_detail_card {
+  border: 1px solid var(--white-fade);
+  width: 50%;
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  border-radius: var(--half-border-radius);
+  position: relative;
+}
+
+.channel_detail_card_data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: justify;
+}
+
+.channel_detail_card_data span {
+  font-size: 0.7em;
+  font-weight: normal;
+  color: var(--white-fade);
+}
+
+.channel_detail_card_data p {
+  margin: 0;
+}
+
+.channel_detail_cta {
+  width: fit-content;
+  position: absolute;
+  top: 8%;
+  right: 2%;
+}
+
+.chart_layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chart_layout_card {
+  position: relative;
+  border: 1px solid var(--white-fade);
+  width: 32%;
+  padding: 20px;
+  border-radius: var(--half-border-radius);
+}
+
+.chart_layout_card h5 {
+  display: block;
+  font-size: 1.6em;
+  margin: 12px 0 4px 0;
+  font-weight: 700 !important;
+}
+
+.chart_layout_card p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.chart_layout_card span {
+  font-size: 0.9em;
+  color: var(--white-half);
+}
+
+.icon {
+  width: fit-content;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.5;
+}
+
+.latest_video_layout {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.latest_video_card {
+  position: relative;
+  width: 32%;
+  min-height: 190px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--half-border-radius);
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  text-align: justify;
+}
+
+.link_cta {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

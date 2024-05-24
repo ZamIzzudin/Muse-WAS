@@ -1,26 +1,41 @@
 /** @format */
 
 .sidebar {
-  background-color: white;
+  background-color: var(--black-fade);
   height: 100vh;
   width: 25vw;
-  padding: 40px 20px 20px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
-  box-shadow: 10px 10px 55px 0px rgba(234, 234, 234, 0.5);
+  border-right: 1px solid var(--white-half);
 }
 
-.brand_logo {
+.user_detail {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid var(--white-half);
+  margin-bottom: 10px;
+}
+
+.user_detail img {
+  border-radius: 100px;
+}
+
+.user_detail > div > p {
+  margin-bottom: 0;
+}
+
+.user_detail > div > p:nth-child(2) {
+  font-size: 0.8em;
+  font-weight: normal;
 }
 
 .sidebar ul {
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -36,40 +51,21 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 24px;
-  border-radius: 100px;
+  padding: 5px 10px;
+  border-radius: var(--half-border-radius);
   transition: all 0.3s;
-  color: var(--black);
+  color: white;
 }
 
 .active a {
-  background-color: var(--black-fade);
-  padding: 14px 24px;
-  font-weight: 700;
-  color: var(--red);
+  background-color: var(--white-half) !important;
+  padding: 10px;
 }
 
-.user_detail {
+.logout_container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: var(--black);
-}
-
-.user_data {
-  color: var(--black);
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.user_data div {
-  display: flex;
-  flex-direction: column;
-}
-
-.user_data img {
-  border-radius: 100px;
+  justify-content: flex-end;
 }
 
 .hide {
@@ -79,12 +75,12 @@
 .logout_btn {
   font-size: 1.3em;
   display: block;
-  padding: 15px;
+  padding: 10px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 100px;
+  border-radius: var(--half-border-radius);
 }
 
 .logout_btn:hover {
-  background-color: var(--black-fade);
+  background-color: var(--white-half);
 }

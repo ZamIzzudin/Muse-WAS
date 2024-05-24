@@ -1,0 +1,139 @@
+/** @format */
+
+.form_container {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "form display";
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 2fr;
+}
+
+.form_container form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-right: 15px;
+}
+
+.form_container form span {
+  display: block;
+  color: var(--white-half);
+  margin-top: 10px;
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+.form_container form .form_cta {
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+}
+
+.form_container form .form_cta button {
+  padding: 5px 15px;
+}
+
+.form_container .form_display {
+  grid-area: display;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 15px;
+  grid-area: display;
+  border: 1px solid var(--white-half);
+  border-radius: var(--half-border-radius);
+  padding: 20px 10px;
+  height: fit-content;
+  flex-direction: column;
+  text-align: center;
+}
+
+.role_display {
+  color: white !important;
+  background-color: var(--white-fade);
+  padding: 5px 20px;
+  border-radius: var(--half-border-radius);
+  font-weight: 600;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.notes,
+.revision_notes {
+  background-color: var(--white-fade);
+  text-align: justify;
+  color: white !important;
+  padding: 10px;
+  border-radius: var(--half-border-radius);
+}
+
+.revision_notes {
+  background-color: rgb(255, 122, 122);
+}
+
+.status_layout {
+  align-items: flex;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  padding: 10px 0 15px 0;
+}
+
+.status_layout div {
+  color: var(--black);
+  background-color: white;
+  border: 1px solid var(--white-half);
+  padding: 5px 15px;
+  border-radius: var(--half-border-radius);
+}
+
+.status_layout div:last-child {
+  color: white;
+  background-color: transparent;
+  border: 1px solid var();
+  padding: 5px 15px;
+  border-radius: var(--half-border-radius);
+}
+
+.notes span {
+  font-weight: bold;
+}
+
+.form_container .form_display p {
+  color: var(--white-half);
+}
+
+.file_upload {
+  display: flex;
+  flex-direction: column;
+}
+
+.file_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--white-half);
+  padding: 5px;
+  border-radius: var(--half-border-radius);
+  margin-bottom: 5px;
+}
+
+.file_detail {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.file_list span {
+  margin: 0 !important;
+}
+
+.file_cta {
+  display: flex;
+}
+
+.image_container {
+  display: flex;
+  gap: 10px;
+}

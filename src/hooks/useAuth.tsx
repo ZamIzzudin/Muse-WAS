@@ -4,7 +4,7 @@
 
 import React from "react";
 import { SessionProvider } from "next-auth/react";
-import { authConfig } from "@util/auth";
+import { AUTH_OPTIONS } from "@util/auth-options";
 import { getServerSession } from "next-auth";
 
 // TYPE SETUP
@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }: childrenProps) => {
 
 // HOOKS
 export async function useAuth() {
-  const session = await getServerSession(authConfig);
+  const session = await getServerSession(AUTH_OPTIONS);
   if (!session) {
     return null;
   }

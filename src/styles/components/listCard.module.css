@@ -2,12 +2,37 @@
 
 .card {
   background-color: var(--black-fade);
-  border-radius: 10px;
-  padding: 10px 0;
+  border-top: 1px solid;
+  padding: 8px 0;
 }
 
 .card div:nth-child(2) span {
   text-wrap: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
+}
+
+.card img {
+  border-radius: 100px;
+}
+
+.user_detail_layout {
+  display: flex;
+  gap: 10px;
+}
+
+.tag_primary,
+.tag_secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--white-fade);
+  padding: 5px 10px;
+  border-radius: var(--half-border-radius);
+}
+
+.tag_secondary {
+  border: 1px solid var(--white-half);
+  background-color: transparent;
 }

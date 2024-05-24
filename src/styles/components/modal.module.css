@@ -1,60 +1,89 @@
+/** @format */
+
 .modal_overlay {
-    background-color: rgba(0, 0, 0, .5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-    z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 999;
 }
 
 .modal {
-    background-color: white;
-    transition: .2s;
-    padding: 20px;
-    position: relative;
-    width: 60vw;
-    height: fit-content;
-    border-radius: 10px;
-    transition: .2s;
-    max-height: 80vh;
-    overflow: auto;
+  background-color: var(--black);
+  border: 1px solid var(--white-half);
+  transition: 0.2s;
+  padding: 20px;
+  position: relative;
+  width: 40vw;
+  height: fit-content;
+  border-radius: var(--border-radius);
+  transition: 0.2s;
+  max-height: 80vh;
+  overflow: auto;
 }
 
 .hide {
-    width: 0vw !important;
-    height: 0vh !important;
+  width: 0vw !important;
+  height: 0vh !important;
 }
 
 .hide .modal {
-    width: 0vw !important;
-    height: 0vh !important;
-    opacity: 0;
+  width: 0vw !important;
+  height: 0vh !important;
+  opacity: 0;
 }
 
 .modal_header {
-    display: flex;
+  display: flex;
 }
 
 .modal_body {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .close_button {
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 15px;
-    font-weight: 2em !important;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px;
+  font-weight: 2em !important;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: var(--border-radius);
+}
+
+.close_button:hover {
+  background-color: var(--white-half);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.modal_cta {
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+}
+
+.modal_cta button {
+  padding: 5px 20px;
 }
 
 @media only screen and (max-width: 600px) {
-    .modal {
-        width: 95vw;
-    }
+  .modal {
+    width: 95vw;
+  }
 }

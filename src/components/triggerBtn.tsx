@@ -2,8 +2,7 @@
 
 "use client";
 
-import { IconContext } from "react-icons";
-import { IoMdAdd } from "react-icons/io";
+import Icon from "./icon";
 
 import { useState, ReactNode } from "react";
 
@@ -12,7 +11,7 @@ import Modal from "@comp/modal";
 interface Props {
   children: ReactNode;
   title: string;
-  placeholder: string;
+  placeholder: ReactNode;
 }
 
 export function CreateTrigger({ children, title }: Props) {
@@ -29,9 +28,7 @@ export function CreateTrigger({ children, title }: Props) {
           setShow({ value: true, title });
         }}
       >
-        <IconContext.Provider value={{ className: "icon" }}>
-          <IoMdAdd />
-        </IconContext.Provider>
+        <Icon variant="Add" />
       </button>
       <Modal setShow={setShow} isShow={isShow}>
         {children}

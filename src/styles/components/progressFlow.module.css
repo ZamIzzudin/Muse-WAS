@@ -1,0 +1,53 @@
+/** @format */
+
+.progress_layout {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.progress_card {
+  width: 20%;
+  border: 1px solid var(--white-fade);
+  padding: 10px;
+  border-radius: var(--half-border-radius);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 5px;
+}
+
+.progress_card h5 {
+  font-size: 1.1em;
+}
+
+.user_layout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user_layout img {
+  border-radius: 100px;
+}
+
+.user_detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_detail span:nth-child(2) {
+  color: var(--white-half);
+  font-size: 0.9em;
+}
+
+.flow_status {
+  background-color: var(--white-fade);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: var(--half-border-radius);
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 0.8em;
+}

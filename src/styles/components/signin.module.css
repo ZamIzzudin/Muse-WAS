@@ -1,13 +1,46 @@
 /** @format */
 
 .layout {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_display {
+  height: 100%;
+  grid-area: left;
   background-image: url("../../assets/bg.jpg");
   background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8% 5%;
+}
+
+.grid_display > div {
+  height: fit-content;
+}
+
+.display_logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.grid_form {
+  height: 100%;
+  grid-area: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20%;
 }
 
 .form_login {
-  background-color: white;
-  border-radius: 8px;
+  text-align: center;
+  border-radius: var(--half-border-radius);
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -24,18 +57,24 @@
 }
 
 .show_pass_btn {
-  padding: 10px 15px;
+  width: fit-content;
+  padding: 0 10px;
   border-radius: 0 !important;
   background-color: transparent;
-  color: var(--red) !important;
-  border: none;
-  border-bottom: 2px solid var(--red) !important;
+  color: white !important;
+  border: 1px solid var(--white-half);
+  border-left: none;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
 }
 
-.form_login img {
-  margin-bottom: 50px;
+.password_form {
+  border-right: none !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .show_pass_btn:hover {
-  color: white !important;
+  color: var(--black) !important;
+  background-color: white;
 }

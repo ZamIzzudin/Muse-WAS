@@ -1,6 +1,6 @@
 /** @format */
 
-export interface ReqUser {
+export interface REQUEST_DATA {
   username: string;
   email: string;
   password: string;
@@ -8,7 +8,7 @@ export interface ReqUser {
   display_name: string;
 }
 
-export interface UpdateUser {
+export interface UPDATE_DATA {
   id: string;
   username: string;
   email: string;
@@ -17,12 +17,12 @@ export interface UpdateUser {
   display_name: string;
 }
 
-export interface LoginUser {
+export interface LOGIN_DATA {
   username: string;
   password: string;
 }
 
-export interface UserList {
+export interface USER_DATA {
   id: string;
   username: string;
   email: string;
